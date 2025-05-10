@@ -33,7 +33,7 @@ export default function Home() {
             </code>
             .
           </li>
-          <li className="tracking-[-.01em]">
+          <li className="text-2xl">
             Save and see your changes instantly.
           </li>
         </ol>
