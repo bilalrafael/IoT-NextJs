@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ResumeCard from './ResumeCard';
 
 export default function InformCard() {
   const [data, setData] = useState(null);
@@ -6,7 +7,7 @@ export default function InformCard() {
     useEffect(() => {
     // Fungsi untuk mengambil data dari API
     const fetchData = () => {
-      fetch('http://192.168.16.164:3000/api/sensor')
+      fetch('http://192.168.77.213:3000/api/sensor')
         .then((response) => response.json())
         .then((data) => setData(data))
         .catch((error) => console.error('Error fetching data:', error));
@@ -34,7 +35,7 @@ export default function InformCard() {
       <div className="flex flex-wrap justify-center">
         <div className="bg-white text-black mx-3 my-2 rounded-xl w-24 text-center shadow-xl">
           <i className="fa-solid fa-temperature-high text-3xl pt-6" />
-          <div className="pt-4 text-2xl font-bold">{data.temperature}°</div> {/* Menampilkan data suhu */}
+          <div className="pt-4 text-2xl font-bold">{data.temperature}°C</div> {/* Menampilkan data suhu */}
           <div className="font-semibold py-2">Suhu</div>
         </div>
 
@@ -50,6 +51,8 @@ export default function InformCard() {
           <div className="font-semibold py-2">PH</div>
         </div>
       </div>
+        {/* kirim ke file resume */}
+      <ResumeCard data={data}/>
     </div>
   );
 }
