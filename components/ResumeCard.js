@@ -23,7 +23,7 @@ export default function ResumeCard({ data }) {
 
 
   return (
-    <div className="bg-gray-200 px-4 mx-3 py-4 rounded-xl">
+    <div className="bg-white px-4 mx-3 mt-3 py-4 rounded-xl shadow-xl">
       <div className="text-gray-900 font-semibold">
         <div>{suhuStatus}</div>
         <div>{kelembabanStatus}</div>

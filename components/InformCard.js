@@ -7,7 +7,7 @@ export default function InformCard() {
     useEffect(() => {
     // Fungsi untuk mengambil data dari API
     const fetchData = () => {
-      fetch('http://192.168.77.213:3000/api/sensor')
+      fetch('http://192.168.16.164:3000/api/sensor')
         .then((response) => response.json())
         .then((data) => setData(data))
         .catch((error) => console.error('Error fetching data:', error));
@@ -15,7 +15,7 @@ export default function InformCard() {
 
     // Panggil fetchData setiap 5 detik
     fetchData(); // Ambil data pertama kali
-    const interval = setInterval(fetchData, 5000); // Ambil data setiap 5 detik
+    const interval = setInterval(fetchData, 5000000); // Ambil data setiap 5 detik
 
     // Membersihkan interval ketika komponen di-unmount
     return () => clearInterval(interval);
@@ -31,7 +31,7 @@ export default function InformCard() {
   }
 
   return (
-    <div className="bg-gray-700 mx-3 my-2 py-4 rounded-2xl shadow-xl">
+    <div className="bg-gray-100 mx-3 my-3 py-4 rounded-2xl shadow-xl">
       <div className="flex flex-wrap justify-center">
         <div className="bg-white text-black mx-3 my-2 rounded-xl w-24 text-center shadow-xl">
           <i className="fa-solid fa-temperature-high text-3xl pt-6" />
