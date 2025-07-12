@@ -7,7 +7,7 @@ export default function InformCard() {
     useEffect(() => {
    
     const fetchData = () => {
-      fetch('https://agroba.vercel.app/api/sensor')
+      fetch('http://growio.vercel.app/api/sensor')
         .then((response) => response.json())
         .then((data) => setData(data))
         .catch((error) => console.error('Error fetching data:', error));
@@ -34,7 +34,7 @@ export default function InformCard() {
         <div className="bg-white text-black mx-3 my-2 rounded-xl w-24 text-center shadow-xl">
           <i className="fa-solid fa-temperature-high text-3xl pt-6" />
           <div className="pt-4 text-2xl font-bold">{data.temperature}°</div> {/* Menampilkan data suhu */}
-          <div className="font-semibold py-2">Suhu</div>
+          <div className="font-semibold py-2">Temperature</div>
         </div>
 
         <div className="bg-white text-black mx-3 my-2 rounded-xl w-24 text-center shadow-xl">
