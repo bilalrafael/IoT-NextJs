@@ -7,7 +7,11 @@ export default function InformCard() {
     useEffect(() => {
    
     const fetchData = () => {
+<<<<<<< HEAD
       fetch('http://growio.vercel.app/api/sensor')
+=======
+      fetch('https://growio.vercel.app/api/sensor')
+>>>>>>> 2e76b3af078ab8fbdc18d9b43cf2840c9abe2757
         .then((response) => response.json())
         .then((data) => setData(data))
         .catch((error) => console.error('Error fetching data:', error));
